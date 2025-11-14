@@ -102,6 +102,12 @@ app.get("/about", (req, res) => {
 app.get("/privacy", (req, res) => {
   res.render("restraunts/privacy.ejs");
 });
+
+// Home Route //
+app.get("/", (req, res) => {
+  res.redirect("/restraunts");
+});
+
 // Error Handling Middleware //
 app.use((err, req, res, next) => {
   let { status = 400, message = "Error Occured!" } = err;
