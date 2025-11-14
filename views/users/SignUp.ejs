@@ -1,0 +1,34 @@
+<!-- Sign Up Form -->
+ <% layout("layouts/boilerplate") %>
+ <link rel="stylesheet" href="css/signup.css">
+<div class="signup-container">
+   
+  <form action="/signup" method="POST" class="needs-validation" novalidate>
+     <h1> SignUp Form</h1>
+    <label for="usrname">
+      <input
+        type="text"
+        placeholder="enter usrname"
+        name="username"
+        id="usrname"
+        class="form-control"
+        required
+      />
+    </label>
+    <label for="eml">
+      <input type="text" placeholder="enter email" name="email" id="eml" class="form-control" required />
+    </label>
+    <label for="usrname">
+      <input
+        type="text"
+        placeholder="enter password"
+        name="password"
+        id="usrname"
+        class="form-control"
+         required
+      />
+    </label>
+
+    <button type="submit">SignUp</button>
+  </form>
+</div>

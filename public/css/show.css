@@ -1,0 +1,445 @@
+/* Styling for show page  */
+@import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+.show-box {
+  height: 100vh;
+  width: 100%;
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(150, 0, 0, 1) 100%,
+    rgba(252, 69, 69, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.show-image-container {
+  height: 68%;
+  width: 50%;
+  cursor: pointer;
+  background-color: yellow;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.3), 0 0 40px rgba(128, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.show-image-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 30px rgb(255, 0, 0), 0 0 60px rgba(128, 0, 0, 0.4);
+}
+
+.show-info-box {
+  height: 70%;
+  width: 40%;
+  margin-top: 80px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(255, 38, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image-box {
+  height: 90%;
+  width: 90%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.show-info-only {
+  height: 90%;
+  width: 100%;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(64, 0, 0, 1) 100%
+  );
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.edit-delete-form-box {
+  height: 20%;
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(64, 0, 0, 1) 100%
+  );
+  margin-top: 4px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.show-info-only h2 {
+  font-family: "Momo Trust Display", sans-serif !important;
+  margin: 15px 8px 0px 15px;
+  padding: 5px 0px 5px 5px;
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+
+.show-info-only p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 10px 0px 0px 22px;
+  padding: 2px 0px 0px 2px;
+  color: rgb(239, 239, 239);
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #59ff00, #f8f8f8);
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif !important;
+  color: black;
+  font-weight: 600;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 55, 0.835);
+}
+
+.edit-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 5px rgb(0, 255, 55);
+  filter: brightness(1.1);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff0000, #ffffff);
+  color: black;
+  font-size: 1.15rem;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(254, 0, 0, 0.784);
+}
+
+.delete-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 5px rgb(255, 56, 1);
+  filter: brightness(1.1);
+}
+
+/* REVIEWS STYLING SECTION */
+
+.review-container {
+  height: 45vh;
+  width: 100%;
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(65, 0, 0) 100%,
+    rgba(252, 69, 69, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.review-container h1 {
+  color: yellow;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+}
+
+#form-style {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.review-form-box {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+
+  /* ✅ GLASS EFFECT */
+  background: rgba(0, 0, 0, 0.35); /* black glass with transparency */
+  backdrop-filter: blur(12px); /* real glass blur */
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.25); /* red tint border */
+
+  /* ✅ SOFT RED GLOW */
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
+
+  /* nice smooth effect */
+  transition: all 0.3s ease;
+}
+
+.rating-div {
+  width: 45%;
+  height: 100%;
+
+  position: relative;
+  padding: 20px;
+}
+
+.comment-div {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.comment-div h3 {
+  font-family: "Poppins", sans-serif;
+  color: rgb(51, 255, 0);
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* STARIBILITY CSS  */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  height: 100%;
+  gap: 8px;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  width: 80px;
+  height: 80px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2'/></svg>")
+    center/contain no-repeat;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover preview */
+.stars label:hover,
+.stars label:hover ~ label {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='%23FFD700' stroke='%23FFD700' stroke-width='2'><polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2'/></svg>")
+    center/contain no-repeat;
+}
+
+/* Selected */
+.stars input:checked ~ label {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='%23FFD700' stroke='%23FFD700' stroke-width='2'><polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2'/></svg>")
+    center/contain no-repeat;
+}
+
+/* // Review button // */
+
+.add-review-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 140px;
+  padding: 12px 25px;
+  font-family: "Poppins", sans-serif;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgb(253, 0, 0) 0%,
+    rgb(255, 0, 0) 35%,
+    rgb(240, 0, 0) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  height: 20%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 12px rgba(255, 59, 59, 0.3);
+  transition: all 0.25s ease;
+}
+
+.add-review-btn:hover {
+  background: #e53232;
+  box-shadow: 0px 8px 18px rgba(255, 59, 59, 0.45);
+  transform: scale(1.05);
+}
+
+.add-review-btn:active {
+  transform: scale(0.97);
+}
+
+/* textarea */
+#cmnt {
+  width: 100%;
+  height: 140px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 0, 0, 0.35);
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  resize: vertical;
+  outline: none;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.25);
+  margin-top: 20px;
+  color: #fff; /* white text for dark glass */
+  transition: 0.3s ease;
+}
+
+#cmnt::placeholder {
+  color: #cccccc;
+}
+
+#cmnt:focus {
+  border-color: rgba(255, 50, 50, 0.6);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
+  transform: scale(1.01);
+}
+
+/* REVIEW SHOWCASE */
+
+.review-card {
+  background: #000000;
+  background: linear-gradient(
+    rgb(58, 58, 58) 90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(87, 87, 87, 1) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 18px;
+  border-radius: 18px;
+  color: #fff;
+  margin: 5px 0;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  transform: scale(1);
+  backdrop-filter: blur(4px);
+}
+
+.review-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 18px yellow;
+}
+
+.review-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.review-card p {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  opacity: 0.9;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.review-card button {
+  background: linear-gradient(135deg, #ff1a1a, #a00000);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 60, 60, 0.5);
+  font-family: "Poppins", sans-serif !important;
+}
+
+.review-card button:hover {
+  background: linear-gradient(135deg, #ff1a1a, #800000);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 60, 60, 0.7);
+}
+
+.col {
+  padding: 12px;
+}
+
+.reviews-wrapper {
+  width: 100%;
+  padding: 25px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(94, 0, 0, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(120, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(120, 0, 0, 0.35);
+  inset: 0 0 12px rgba(255, 0, 0, 0.15);
+}
+
+/* Reviews Heading */
+.reviews-wrapper h1 {
+  color: #eaff00;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif !important;
+}

@@ -1,0 +1,30 @@
+<!-- Login Form -->
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="css/login.css" />
+<div class="login-conatiner">
+  <form action="/login" method="POST" class="needs-validation" novalidate>
+    <h1>Login</h1>
+    <label for="usernmee">
+      <input
+        type="text"
+        name="username"
+        placeholder="enter username"
+        id="usernmee"
+        class="form-control"
+        required
+      />
+    </label>
+
+    <label for="pass">
+      <input
+        type="text"
+        name="password"
+        placeholder="enter password"
+        id="pass"
+        class="form-control"
+        required
+      />
+    </label>
+    <button type="submit">Enter</button>
+  </form>
+</div>

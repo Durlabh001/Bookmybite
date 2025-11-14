@@ -1,0 +1,133 @@
+/* PAGE CONTAINER */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(82, 0, 0, 1) 47%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 20px;
+}
+
+.signup-container h1 {
+  color: #e40000;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(181, 0, 0, 0.4);
+  animation: titleFade 0.6s ease-out;
+}
+
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SIGNUP CARD */
+.signup-container form {
+  width: 380px;
+  padding: 35px 30px;
+
+  background: rgba(20, 0, 0, 0.45);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 40, 40, 0.25);
+
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
+  animation: popup 0.5s ease;
+  transform-origin: center;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* INPUT WRAPPER */
+.signup-container form label {
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+}
+
+/* INPUT FIELDS */
+.signup-container input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white !important;
+
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+  letter-spacing: 0.5px;
+
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* INPUT PLACEHOLDER */
+.signup-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.signup-container input:focus {
+  border-color: #ff4d4d;
+  background: rgba(255, 30, 30, 0.12);
+  box-shadow: 0 0 12px rgba(255, 60, 60, 0.7);
+  transform: scale(1.02);
+}
+
+/* SUBMIT BUTTON */
+.signup-container button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif !important;
+  background: linear-gradient(135deg, #b30000, #ff1a1a);
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 0 15px rgba(255, 10, 10, 0.4);
+}
+
+/* BUTTON HOVER */
+.signup-container button:hover {
+  background: linear-gradient(135deg, #ff1a1a, #b30000);
+
+  box-shadow: 0 0 20px rgba(255, 40, 40, 0.8), 0 0 8px rgba(255, 40, 40, 0.5);
+
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* BUTTON ACTIVE */
+.signup-container button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 10px rgba(255, 40, 40, 0.4);
+}

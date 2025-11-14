@@ -1,0 +1,118 @@
+<!-- Edit Restraunt Form -->
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/form.css" />
+
+<section class="add-rest-form-section">
+  <div class="add-rest-card">
+    <h2 class="add-rest-heading">Edit Your Restaurant</h2>
+    <form
+      action="/restraunts/<%= restraunt._id %>?_method=PATCH"
+      method="POST"
+      class="needs-validation"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <div class="mb3">
+        <label for="ttl">Title</label>
+        <input
+          type="text"
+          placeholder="enter your title"
+          name="title"
+          value="<%= restraunt.title %>"
+          id="ttl"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="desc"
+          >Description
+          <textarea
+            name="description"
+            id="desc"
+            placeholder="enter description"
+            class="form-control"
+            required
+          >
+ <%= restraunt.description%></textarea
+          >
+        </label>
+      </div>
+
+      <div>
+        <label for="img"
+          >Image
+          <input
+            type="file"
+            placeholder="enter image url"
+            name="image"
+            value="<%= restraunt.image.url %>"
+            id="img"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="prc"
+          >Price
+          <input
+            type="number"
+            placeholder="enter your price"
+            name="price"
+            value="<%= restraunt.price %>"
+            id="prc"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="loc"
+          >Location
+          <input
+            type="text"
+            placeholder="enter restraunt location"
+            name="location"
+            value="<%= restraunt.location %>"
+            id="loc"
+            class="form-control"
+            required
+          />
+        </label>
+
+        <label for="ctry"
+          >Country
+          <input
+            type="text"
+            placeholder="enter restraunt country"
+            name="country"
+            value="<%= restraunt.country %>"
+            id="ctry"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="ctgry"
+          >Category
+          <input
+            type="text"
+            placeholder="Ex:- Indian , Italian etc"
+            name="category"
+            value="<%= restraunt.category %>"
+            id="ctgry"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+      <button type="submit">Edit Restraunt</button>
+    </form>
+  </div>
+</section>

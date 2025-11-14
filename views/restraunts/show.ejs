@@ -1,0 +1,106 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/show.css" />
+
+<div class="show-box">
+  <div class="show-image-container">
+    <div class="image-box">
+      <img src="<%= restraunt.image.url %>" alt="Img" />
+    </div>
+  </div>
+  <div class="show-info-box">
+    <div class="show-info-only">
+      <h2>Name :- <%= restraunt.title %></h2>
+      <p><i>Owner :- <%= restraunt.owner.username %></i></p>
+      <p>
+        <i>Price :- ₹&nbsp;<%= restraunt.price.toLocaleString("en-IN") %></i>
+      </p>
+      <p><i>Cousine :- <%= restraunt.category %></i></p>
+      <p><i>Location :- <%= restraunt.location %></i></p>
+      <p><i>Country :- <%= restraunt.country%></i></p>
+      <p><i>Description : <%= restraunt.description %></i></p>
+    </div>
+
+    <% if(currUser && currUser.id === restraunt.owner.id) { %>
+    <div class="edit-delete-form-box">
+      <form action="/restraunts/<%= restraunt._id %>/edit">
+        <button type="Submit" class="edit-btn">Edit Restraunt</button>
+      </form>
+      <form
+        action="/restraunts/<%= restraunt._id %>?_method=DELETE"
+        method="POST"
+      >
+        <button type="submit" class="delete-btn">Delete Restraunt</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<!-- REVIEWS SECTION -->
+<% if(currUser) { %>
+<div class="review-container">
+  <h1>Add Your Reviews</h1>
+  <div class="review-form-box">
+    <form
+      action="/restraunts/<%= restraunt._id %>/review"
+      method="POST"
+      class="needs-validation"
+      id="form-style"
+      novalidate
+    >
+      <div class="rating-div">
+        <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5"></label>
+
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4"></label>
+
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3"></label>
+
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2"></label>
+
+          <input type="radio" id="star1" name="rating" value="1" required />
+          <label for="star1"></label>
+        </div>
+      </div>
+
+      <div class="comment-div">
+        <label for="cmnt"></label>
+        <textarea
+          name="comment"
+          id="cmnt"
+          placeholder="enter your valuable comment.."
+          class="form-control"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="add-review-btn">Add Review</button>
+    </form>
+  </div>
+</div>
+<!-- Reviews Showcase section-->
+<div class="reviews-wrapper">
+  <h1>Review Showcase</h1>
+
+  <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
+    <% for(review of restraunt.reviews) { %>
+    <div class="col">
+      <div class="review-card">
+        <h3>Owner : <%= review.author.username %></h3>
+        <p>Rating : <%= review.rating %>⭐</p>
+        <p>Comment : <%= review.comment %></p>
+        <form
+          action="/restraunts/<%= restraunt._id %>/review/<%= review._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+<% } %>

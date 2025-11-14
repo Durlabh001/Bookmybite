@@ -1,0 +1,108 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/form.css" />
+
+<section class="add-rest-form-section">
+  <div class="add-rest-card">
+    <h2 class="add-rest-heading">Add Your Restaurant</h2>
+    <form
+      action="/restraunts"
+      method="POST"
+      class="needs-validation"
+      enctype="multipart/form-data"
+      novalidate
+    >
+      <div class="mb3">
+        <label for="ttl">Title</label>
+        <input
+          type="text"
+          placeholder="enter your title"
+          name="title"
+          id="ttl"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="desc"
+          >Description
+          <textarea
+            name="description"
+            id="desc"
+            placeholder="enter description"
+            class="form-control"
+            required
+          ></textarea>
+        </label>
+      </div>
+
+      <div>
+        <label for="img"
+          >Image
+          <input
+            type="file"
+            name="image"
+            id="img"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="prc"
+          >Price
+          <input
+            type="number"
+            placeholder="enter your price"
+            name="price"
+            id="prc"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="loc"
+          >Location
+          <input
+            type="text"
+            placeholder="enter restraunt location"
+            name="location"
+            id="loc"
+            class="form-control"
+            required
+          />
+        </label>
+
+        <label for="ctry"
+          >Country
+          <input
+            type="text"
+            placeholder="enter restraunt country"
+            name="country"
+            id="ctry"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label for="ctgry"
+          >Category
+          <input
+            type="text"
+            placeholder="Ex:- Indian , Italian etc"
+            name="category"
+            id="ctgry"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+      <button type="submit">Add Restraunt</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+/* CSS FOR ERROR */
+
+.error-container {
+  height: 90vh;
+  width: 100%;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(107, 0, 0, 1) 35%,
+    rgba(28, 0, 0, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-card {
+  width: 45%;
+  height: 80%;
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #b30000, #7a0000);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.56),
+    inset 0 0 10px rgba(255, 255, 255, 0.842);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-card p {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif !important;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.error-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, #000000, #780000);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.error-btn:hover {
+  background: linear-gradient(135deg, #ff1a1a, #8b0000);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 30, 30, 0.6);
+}
+
+.error-img {
+    width: 200px;
+    height: 200px;
+  margin-top: 10px;
+  filter: drop-shadow(0px 0px 10px regba(255, 0, 0, 0.5));
+}

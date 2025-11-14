@@ -1,0 +1,35 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/filter.css" />
+<div class="category-main-box">
+  <h1>&#9632; Searched Results &#9632;</h1>
+
+  <div class="category-container">
+    <% if(filteredRestraunts.length === 0) { %>
+    <div style="height: 100vh">
+      <h1>There is no restraunt for this category</h1>
+    </div>
+    <% } else { %> <% for(let restraunt of filteredRestraunts) { %>
+    <a href="/restraunts/<%= restraunt._id %>">
+      <div class="restraunt-category-card">
+        <img
+          src="<%= restraunt.image.url %>"
+          alt="<%= restraunt.title %>"
+          class="card-img"
+        />
+
+        <!-- Info section -->
+        <div class="card-info">
+          <h3 class="card-title"><%= restraunt.title %></h3>
+          <p class="card-price">
+            Price: ₹<%= restraunt.price.toLocaleString("en-IN") %>
+          </p>
+          <p class="card-location">
+            Location: <%= restraunt.location %>, <%= restraunt.country %>
+          </p>
+          <p class="card-category">Category: <%= restraunt.category %></p>
+        </div>
+      </div>
+    </a>
+    <% } %> <% } %>
+  </div>
+</div>

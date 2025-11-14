@@ -1,0 +1,36 @@
+<!-- Navbar For Book My Bite -->
+<nav class="navbar navbar-expand-lg">
+  <div class="nav-logo">
+    <a href="http://localhost:8080/restraunts"
+      >BookMyBite <i class="fa-solid fa-utensils"></i
+    ></a>
+  </div>
+  <div class="nav-links">
+    <a href="http://localhost:8080/restraunts" class="nav-link-style"
+      >Explore</a
+    >
+    <a href="http://localhost:8080/restraunts/new" class="nav-link-style"
+      >Serve</a
+    >
+    <a href="/about" class="nav-link-style">About</a>
+  </div>
+  <div class="search-bar">
+    <form action="/search" method="POST">
+      <input
+        class="search-input-feild"
+        type="text"
+        placeholder="seach restraunts"
+        name="q"
+      />
+      <button type="submit" class="seach-bar-btn">Search</button>
+    </form>
+  </div>
+  <div class="auth-btns">
+    <% if(!currUser) { %>
+    <a href="http://localhost:8080/signup" class="sign-up-btn">Signup</a>
+    <a href="http://localhost:8080/login" class="login-btn">Login</a>
+    <% } %> <% if(currUser) { %>
+    <a href="http://localhost:8080/logout" class="sign-up-btn">Logout</a>
+    <% } %>
+  </div>
+</nav>

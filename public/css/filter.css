@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Styling for category box */
+.filter-category-box {
+  height: 13vh;
+  width: 70%;
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  margin-top: 5px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 3px solid gold;
+  box-shadow: 0px 0px 12px grey;
+}
+
+.filter-category-box a {
+  height: 80%;
+  width: 15%;
+  text-decoration: none;
+}
+
+.icon-1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-1 i {
+  font-size: 2.7rem;
+  color: yellow;
+  padding-top: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.icon-1 i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 10px yellow);
+}
+
+.icon-2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-2 i {
+  font-size: 2.7rem;
+  color: orange;
+  padding-top: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.icon-2 i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 10px orange);
+}
+
+.icon-3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-3 i {
+  font-size: 2.7rem;
+  color: red;
+  padding-top: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.icon-3 i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 10px red);
+}
+
+.icon-4 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-4 i {
+  font-size: 2.7rem;
+  color: rgb(255, 0, 255);
+  padding-top: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.icon-4 i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 10px rgb(255, 0, 255));
+}
+
+.icon-5 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-5 i {
+  font-size: 2.7rem;
+  color: rgb(0, 247, 255);
+  padding-top: 3px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.icon-5 i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 10px rgb(0, 247, 255));
+}
+
+.filter-category-name-p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding-top: 5px;
+}
+
+/* Filter ejs style */
+
+.category-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 18, 23, 1) 100%
+  );
+}
+
+.category-container a {
+  text-decoration: none;
+}
+
+/* Individual restaurant card */
+.restraunt-category-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.restraunt-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Info section */
+.card-info {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+.card-price,
+.card-location,
+.card-category {
+  font-size: 16px;
+  color: #2a2a2a;
+  margin: 0;
+  font-weight: 500;
+}
+
+.category-main-box {
+  width: 100%;
+  height: 100%;
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 18, 23, 1) 100%
+  );
+}
+
+.category-main-box h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: yellow;
+  text-align: center;
+  padding-top: 10px;
+}
